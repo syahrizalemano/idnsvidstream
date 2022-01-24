@@ -57,8 +57,8 @@ async def play(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="Menu", callback_data="cbmenu"),
-                InlineKeyboardButton(text="Close", callback_data="cls"),
+                InlineKeyboardButton(text="🄼🄴🄽🅄", callback_data="cbmenu"),
+                InlineKeyboardButton(text="🄲🄻🄾🅂🄴", callback_data="cls"),
             ]
         ]
     )
@@ -151,7 +151,7 @@ async def play(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_2}",
-                    caption=f"💡 **music streaming started.**\n\n🏷 **Name:** [{songname}]({link})\n💭 **Chat:** `{chat_id}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                    caption=f"💡 **𝙨𝙩𝙖𝙧𝙩 𝙤𝙣 𝙢𝙪𝙨𝙞𝙘 𝙨𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜.**\n\n🏷 **𝙉𝙖𝙢𝙖 𝙡𝙖𝙜𝙪:** {songname}]({link})\n💭 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n💡 **𝙎𝙩𝙖𝙩𝙪𝙨 𝙨𝙖𝙖𝙩 𝙞𝙣𝙞:** `Playing`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}",
                     reply_markup=keyboard,
                 )
         else:
@@ -180,7 +180,7 @@ async def play(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=f"{IMG_1}",
-                                caption=f"💡 **Track added to the queue**\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}\n🔢 **At position »** `{pos}`",
+                                caption=f"💡 **Track added to the queue**\n\n🏷 **𝙉𝙖𝙢𝙖 𝙡𝙖𝙜𝙪:** [{songname}]({url})\n💭 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}\n🔢 **𝙋𝙤𝙨𝙞𝙨𝙞 𝙡𝙞𝙨𝙩 »** `{pos}`",
                                 reply_markup=keyboard,
                             )
                         else:
@@ -197,7 +197,7 @@ async def play(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
                                     photo=f"{IMG_2}",
-                                    caption=f"💡 **music streaming started.**\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** `{chat_id}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                                    caption=f"💡 **𝙨𝙩𝙖𝙧𝙩 𝙤𝙣 𝙢𝙪𝙨𝙞𝙘 𝙨𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜.**\n\n🏷 **𝙉𝙖𝙢𝙖 𝙡𝙖𝙜𝙪:** [{songname}]({url})\n💭 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n💡 **𝙎𝙩𝙖𝙩𝙪𝙨 𝙨𝙖𝙖𝙩 𝙞𝙣𝙞:** `Playing`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}",
                                     reply_markup=keyboard,
                                 )
                             except Exception as ep:
@@ -229,7 +229,7 @@ async def play(c: Client, m: Message):
                         )
                         await m.reply_photo(
                             photo=f"{IMG_1}",
-                            caption=f"💡 **Track added to the queue**\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}\n🔢 **At position »** `{pos}`",
+                            caption=f"💡 **Track added to the queue**\n\n🏷 **𝙉𝙖𝙢𝙖 𝙡𝙖𝙜𝙪:** [{songname}]({url})\n💭 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}\n🔢 **𝙋𝙤𝙨𝙞𝙨𝙞 𝙡𝙞𝙨𝙩 »** `{pos}`",
                             reply_markup=keyboard,
                         )
                     else:
@@ -246,7 +246,7 @@ async def play(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=f"{IMG_2}",
-                                caption=f"💡 **music streaming started.**\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** `{chat_id}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                                caption=f"💡 **𝙨𝙩𝙖𝙧𝙩 𝙤𝙣 𝙢𝙪𝙨𝙞𝙘 𝙨𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜.**\n\n🏷 **𝙉𝙖𝙢𝙖 𝙡𝙖𝙜𝙪:** [{songname}]({url})\n💭 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n💡 **𝙎𝙩𝙖𝙩𝙪𝙨 𝙨𝙖𝙖𝙩 𝙞𝙣:** `Playing`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}",
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
@@ -262,8 +262,8 @@ async def stream(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="Menu", callback_data="cbmenu"),
-                InlineKeyboardButton(text="Close", callback_data="cls"),
+                InlineKeyboardButton(text="🄼🄴🄽🅄", callback_data="cbmenu"),
+                InlineKeyboardButton(text="🄲🄻🄾🅂🄴", callback_data="cls"),
             ]
         ]
     )
@@ -324,7 +324,7 @@ async def stream(c: Client, m: Message):
         await m.reply("» give me a live-link/m3u8 url/youtube link to stream.")
     else:
         link = m.text.split(None, 1)[1]
-        suhu = await m.reply("🔄 **processing stream...**")
+        suhu = await m.reply("🔄 **Loading, sabar...**")
 
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
@@ -343,7 +343,7 @@ async def stream(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f"💡 **Track added to the queue**\n\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}\n🔢 **At position »** `{pos}`",
+                    caption=f"💡 **Track added to the queue**\n\n💭 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}\n🔢 **𝙋𝙤𝙨𝙞𝙨𝙞 𝙡𝙞𝙨𝙩 »** `{pos}`",
                     reply_markup=keyboard,
                 )
             else:
@@ -362,7 +362,7 @@ async def stream(c: Client, m: Message):
                     )
                     await m.reply_photo(
                         photo=f"{IMG_2}",
-                        caption=f"💡 **[Radio live]({link}) stream started.**\n\n💭 **Chat:** `{chat_id}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                        caption=f"💡 **[𝙍𝙖𝙙𝙞𝙤 𝙇𝙞𝙫𝙚]({link}) 𝙎𝙩𝙧𝙚𝙖𝙢 𝙎𝙩𝙖𝙧𝙩.**\n\n💭 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n💡 **𝙎𝙩𝙖𝙩𝙪𝙨 𝙨𝙖𝙖𝙩 𝙞𝙣𝙞:** `Playing`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}",
                         reply_markup=keyboard,
                     )
                 except Exception as ep:
