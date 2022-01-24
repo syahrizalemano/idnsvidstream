@@ -56,15 +56,15 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(command(["vplay", f"vplay@{BOT_USERNAME}"]) & other_filters)
-async def vplay(c: Client, m: Message):
+@Client.on_message(command(["idnsvplay", f"idnsvplay@{BOT_USERNAME}"]) & other_filters)
+async def idnsvplay(c: Client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="Menu", callback_data="cbmenu"),
-                InlineKeyboardButton(text="Close", callback_data="cls"),
+                InlineKeyboardButton(text="🄼🄴🄽🅄", callback_data="cbmenu"),
+                InlineKeyboardButton(text="🄲🄻🄾🅂🄴", callback_data="cls"),
             ]
         ]
     )
@@ -75,7 +75,7 @@ async def vplay(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"💡 To use me, I need to be an **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Ban users__\n» ❌ __Add users__\n» ❌ __Manage voice chat__\n\nData is **updated** automatically after you **promote me**"
+            f To use me, I need to be an **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Ban users__\n» ❌ __Add users__\n» ❌ __Manage voice chat__\n\nData is **updated** automatically after you **promote me**"
         )
         return
     if not a.can_manage_voice_chats:
@@ -135,7 +135,7 @@ async def vplay(c: Client, m: Message):
                 else:
                     Q = 720
                     await loser.edit(
-                        "» __only 720, 480, 360 allowed__ \n💡 **now streaming video in 720p**"
+                        "» __only 720, 480, 360 allowed__ \n₰ **now streaming video in 720p**"
                     )
             try:
                 if replied.video:
@@ -151,7 +151,7 @@ async def vplay(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f"💡 **Track added to the queue**\n\n[{songname}]({link})\n💬 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}\n🔢 **At position »** `{pos}`",
+                    caption=f"₰ **Track added to the queue**\n\n[{songname}]({link})\n₰ **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n₰ **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}\n₰ **𝙋𝙤𝙨𝙞𝙨𝙞 𝙡𝙞𝙨𝙩 »** `{pos}`",
                     reply_markup=keyboard,
                 )
             else:
@@ -175,7 +175,7 @@ async def vplay(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_2}",
-                    caption=f"💡 **video streaming started.**\n\n[{songname}]({link})\n💬 **Chat:** `{chat_id}`\nℹ️ **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                    caption=f"₰ **𝙑𝙞𝙙𝙚𝙤 𝙎𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜 𝘿𝙞 𝙢𝙪𝙡𝙖𝙞...**\n\n[{songname}]({link})\n₰ **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\nℹ️ **𝙎𝙩𝙖𝙩𝙪𝙨 𝙨𝙖𝙖𝙩 𝙞𝙣𝙞:** `Playing`\n₰ **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}",
                     reply_markup=keyboard,
                 )
         else:
@@ -206,7 +206,7 @@ async def vplay(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=f"{IMG_1}",
-                                caption=f"💡 **Track added to the queue**\n\n[{songname}]({url})\n💬 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}\n🔢 **At position »** `{pos}`",
+                                caption=f"💡 **𝙑𝙞𝙙𝙚𝙤 𝙎𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜 𝘿𝙞 𝙢𝙪𝙡𝙖𝙞...**\n\n[{songname}]({url})\n💬 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}\n🔢 **𝙋𝙤𝙨𝙞𝙨𝙞 𝙡𝙞𝙨𝙩 »** `{pos}`",
                                 reply_markup=keyboard,
                             )
                         else:
@@ -225,7 +225,7 @@ async def vplay(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
                                     photo=f"{IMG_2}",
-                                    caption=f"💡 **video streaming started.**\n\n[{songname}]({url})\n💬 **Chat:** `{chat_id}`\nℹ️ **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                                    caption=f"💡 **𝙑𝙞𝙙𝙚𝙤 𝙎𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜 𝘿𝙞 𝙢𝙪𝙡𝙖𝙞....**\n\n[{songname}]({url})\n💬 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\nℹ️ **𝙎𝙩𝙖𝙩𝙪𝙨 𝙨𝙖𝙖𝙩 𝙞𝙣𝙞:** `Playing`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}",
                                     reply_markup=keyboard,
                                 )
                             except Exception as ep:
@@ -259,7 +259,7 @@ async def vplay(c: Client, m: Message):
                         )
                         await m.reply_photo(
                             photo=f"{IMG_1}",
-                            caption=f"💡 **Track added to the queue**\n\n[{songname}]({url})\n💬 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}\n🔢 **At position »** `{pos}`",
+                            caption=f"💡 **Track added to the queue**\n\n[{songname}]({url})\n💬 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}\n🔢 **𝙋𝙤𝙨𝙞𝙨𝙞 𝙡𝙞𝙨𝙩 »** `{pos}`",
                             reply_markup=keyboard,
                         )
                     else:
@@ -278,7 +278,7 @@ async def vplay(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=f"{IMG_2}",
-                                caption=f"💡 **video streaming started.**\n\n[{songname}]({url})\n💬 **Chat:** `{chat_id}`\nℹ️ **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                                caption=f"💡 **𝙑𝙞𝙙𝙚𝙤 𝙎𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜 𝘿𝙞 𝙢𝙪𝙡𝙖𝙞....**\n\n[{songname}]({url})\n💬 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\nℹ️ **𝙎𝙩𝙖𝙩𝙪𝙨 𝙨𝙖𝙖𝙩 𝙞𝙣𝙞:** `Playing`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}",
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
@@ -389,7 +389,7 @@ async def vstream(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f"💡 **Track added to the queue**\n💬 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}\n🔢 **At position »** `{pos}`",
+                    caption=f"💡 **Track added to the queue**\n💬 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\n🎧 *𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}\n🔢 **𝙋𝙤𝙨𝙞𝙨𝙞 𝙡𝙞𝙨𝙩 »** `{pos}`",
                     reply_markup=keyboard,
                 )
             else:
@@ -416,7 +416,7 @@ async def vstream(c: Client, m: Message):
                     )
                     await m.reply_photo(
                         photo=f"{IMG_2}",
-                        caption=f"💡 **[Live stream video]({link}) started.**\n💬 **Chat:** `{chat_id}`\nℹ️ **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                        caption=f"💡 **[𝙑𝙞𝙙𝙚𝙤 𝙎𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜]({link}) started.**\n💬 **𝘾𝙝𝙖𝙩 𝙞𝙙:** `{chat_id}`\nℹ️ **𝙎𝙩𝙖𝙩𝙪𝙨 𝙨𝙖𝙖𝙩 𝙞𝙣𝙞:** `Playing`\n🎧 **𝙋𝙚𝙧𝙢𝙞𝙣𝙩𝙖𝙖𝙣 𝙙𝙖𝙧𝙞:** {requester}",
                         reply_markup=keyboard,
                     )
                 except Exception as ep:
